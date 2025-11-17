@@ -448,11 +448,11 @@
         </div>
     </div>
 
-        <script>
+    <script>
         // ============================================
         // ADD YOUR HISTORICAL FIGURES HERE!
         // ============================================
-        const profiles = [
+                const profiles = [
             {
                 name: "George Washington",
                 age: 43,
@@ -698,11 +698,12 @@
             }
         }
 
-        function showMatchResults() {
+                function showMatchResults() {
             const cardContainer = document.getElementById('cardContainer');
             
             // Define who's who
-            const patriots = ['George Washington','Thomas Jefferson','Benjamin Franklin','John Adams','Alexander Hamilton','Samuel Adams','Thomas Paine','Nathanael Greene','Henry Knox','Marquis de Lafayette','Abigail Adams','Mercy Otis Warren'];
+            const patriots = ['George Washington','Thomas Jefferson','Benjamin Franklin','John Adams', 'Alexander Hamilton','Samuel Adams','Thomas Paine','Nathanael Greene','Henry Knox', 'Marquis de Lafayette','Abigail Adams','Mercy Otis Warren'];
+            
             const loyalists = ['King George III','Lord Cornwallis','Benedict Arnold'];
             
             // Count matches by category
@@ -782,6 +783,24 @@
             
             document.getElementById('endMessage').style.display = 'block';
         }
+            const matchedNames = likedProfiles.map(p => p.name).join(', ');
+            
+            cardContainer.innerHTML = `
+                <div style="text-align: center; padding: 40px 30px; color: #424242; overflow-y: auto; max-height: 100%;">
+                    <div style="font-size: 100px; margin-bottom: 20px;">${emoji}</div>
+                    <h2 style="font-size: 36px; margin-bottom: 20px; color: #fd297b;">Results Are In!</h2>
+                    <p style="font-size: 22px; font-weight: 600; color: #fd297b; margin-bottom: 15px;">${typeLabel}</p>
+                    <p style="font-size: 20px; margin-bottom: 30px; line-height: 1.6;">${message}</p>
+                    ${likedProfiles.length > 0 ? `<div style="margin-top: 30px;">
+                        <p style="font-size: 18px; font-weight: 600; margin-bottom: 15px;">You matched with:</p>
+                        <p style="font-size: 16px; color: #666; line-height: 1.8;">${matchedNames}</p>
+                    </div>` : ''}
+                    ${analysis}
+                </div>
+            `;
+            
+            document.getElementById('endMessage').style.display = 'block';
+        }
 
         function swipeRight() {
             if (currentIndex < profiles.length) {
@@ -800,7 +819,6 @@
             showStamp('NOPE');
             swipe('left');
         }
-
         function showLikeAnimation() {
             // ALWAYS show these 2 emojis first
             const guaranteed = ['🇺🇸', '🦅'];
@@ -901,7 +919,6 @@
             passedProfiles = [];
             loadProfile();
         }
-
         // Load the first profile when page loads
         window.onload = function() {
             loadProfile();
