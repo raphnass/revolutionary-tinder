@@ -638,6 +638,8 @@
         // JAVASCRIPT CODE - DON'T EDIT BELOW
         // ============================================
         let currentIndex = 0;
+        let likedProfiles = [];
+        let passedProfiles = [];
 
         function createCard(profile) {
             const interestTags = profile.interests.map(interest => 
@@ -691,23 +693,63 @@
                 document.getElementById('totalProfiles').textContent = profiles.length;
                 document.getElementById('endMessage').style.display = 'none';
             } else {
-                document.getElementById('cardContainer').innerHTML = '';
-                document.getElementById('endMessage').style.display = 'block';
+                showMatchResults();
             }
         }
 
+        function showMatchResults() {
+            const cardContainer = document.getElementById('cardContainer');
+            const patriotCount = likedProfiles.filter(p => !p.name.includes('George III') && !p.name.includes('Cornwallis')).length;
+            const loyalistCount = likedProfiles.filter(p => p.name.includes('George III') || p.name.includes('Cornwallis')).length;
+            
+            let message = '';
+            let emoji = '';
+            
+            if (loyalistCount > patriotCount) {
+                message = "Interesting... you're into loyalists! 🇬🇧 Maybe the revolution wasn't for you?";
+                emoji = '👑';
+            } else if (patriotCount > 0) {
+                message = "You support the revolution! 🇺🇸 Freedom lover detected!";
+                emoji = '🦅';
+            } else {
+                message = "You passed on everyone? Commitment issues much? 😅";
+                emoji = '🚫';
+            }
+
+            const matchedNames = likedProfiles.map(p => p.name).join(', ');
+            
+            cardContainer.innerHTML = `
+                <div style="text-align: center; padding: 60px 30px; color: #424242;">
+                    <div style="font-size: 100px; margin-bottom: 20px;">${emoji}</div>
+                    <h2 style="font-size: 36px; margin-bottom: 20px; color: #fd297b;">It's a Match!</h2>
+                    <p style="font-size: 20px; margin-bottom: 30px; line-height: 1.6;">${message}</p>
+                    ${likedProfiles.length > 0 ? `<div style="margin-top: 30px;">
+                        <p style="font-size: 18px; font-weight: 600; margin-bottom: 15px;">You matched with:</p>
+                        <p style="font-size: 16px; color: #666; line-height: 1.8;">${matchedNames}</p>
+                    </div>` : ''}
+                </div>
+            `;
+            
+            document.getElementById('endMessage').style.display = 'block';
+        }
+
         function swipeRight() {
+            if (currentIndex < profiles.length) {
+                likedProfiles.push(profiles[currentIndex]);
+            }
             showLikeAnimation();
             showStamp('LIKE');
             swipe('right');
         }
 
         function swipeLeft() {
+            if (currentIndex < profiles.length) {
+                passedProfiles.push(profiles[currentIndex]);
+            }
             showSadAnimation();
             showStamp('NOPE');
             swipe('left');
         }
-
         function showLikeAnimation() {
             // ALWAYS show these 2 emojis first
             const guaranteed = ['🇺🇸', '🦅'];
@@ -804,9 +846,10 @@
 
         function restartSwipe() {
             currentIndex = 0;
+            likedProfiles = [];
+            passedProfiles = [];
             loadProfile();
         }
-
         // Load the first profile when page loads
         window.onload = function() {
             loadProfile();
