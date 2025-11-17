@@ -196,6 +196,28 @@
             color: #424242;
             margin-bottom: 15px;
         }
+        .flags-section {
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+
+        .flag-item {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 6px;
+            color: #424242;
+        }
+
+        .green-flag {
+            color: #21de87;
+            font-weight: 600;
+        }
+
+        .red-flag {
+            color: #ff4458;
+            font-weight: 600;
+        }
+        
         
         .interests {
             display: flex;
@@ -213,7 +235,6 @@
             color: #424242;
             font-weight: 500;
         }
-        
         .action-buttons {
             padding: 15px 20px 30px 20px;
             display: flex;
@@ -434,11 +455,13 @@
             {
                 name: "George Washington",
                 age: 43,
-                image: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
+                image: "https://i.chzbgr.com/full/6611041536/hE57CDFD7/george-washington-the-true-commander-chief.jpg",
                 emoji: "⚔️",
                 job: "General & Founding Father",
                 location: "3 miles away in Mount Vernon, Virginia",
                 bio: "Looking for someone who can handle my wooden teeth and even woodener personality. Swipe right if you're into crossing frozen rivers and making history.\n\nNo drama—I literally cannot tell a lie.\n\nRed flags: British loyalists, anyone who thinks I chopped down that cherry tree (fake news).",
+                green_flags: ["Natural leader", "Cannot tell a lie", "Great with horses"],
+                red_flags: ["Slave owner", "Emotionally distant", "Obsessed with honor"],
                 interests: ["⚔️ Military Strategy", "🌾 Farming", "🐴 Horseback Riding", "📜 Constitution"]
             },
             {
@@ -449,26 +472,32 @@
                 job: "Founding Father & Polymath",
                 location: "5 miles away in Monticello, Virginia",
                 bio: "I can write you beautiful love letters (drafted the Declaration of Independence, NBD). Into philosophy, wine, and architecture.\n\nFull disclosure: I'm... complicated.\n\nSwipe right for intellectual conversation. Red flags: I own slaves while writing about equality. It's a whole thing.",
+                green_flags: ["Brilliant writer", "Renaissance man", "Great conversationalist"],
+                red_flags: ["Major hypocrite about slavery", "Sketchy personal life", "Spends beyond his means"],
                 interests: ["📖 Reading", "🍷 Wine", "🏛️ Architecture", "🎻 Violin"]
             },
             {
                 name: "Benjamin Franklin",
                 age: 70,
-                image: "https://cdn.prod.website-files.com/5e94942247047e79b85db6b3/5f0686f4533d677ed5f754aa_ben_franklin.jpeg",
+                image: "https://media.tenor.com/-sSLpd87GxIAAAAM/benjamin-franklin-aura.jpg",
                 emoji: "💡",
                 job: "Founding Father & Diplomat",
                 location: "10 miles away in Philadelphia, Pennsylvania",
                 bio: "70 is the new 50. I invented bifocals so I can see you better 😉\n\nRetired from printing, now doing diplomacy in France where they LOVE me.\n\nSwipe right if you appreciate a man who can negotiate treaties AND fly kites in thunderstorms. Red flags: None, I'm perfect.",
+                green_flags: ["Genius inventor", "Witty AF", "Popular in France"],
+                red_flags: ["Literal player", "Way too old", "Never stops talking about himself"],
                 interests: ["⚡ Electricity", "📰 Printing", "🇫🇷 French Culture", "💡 Inventing"]
             },
             {
                 name: "John Adams",
                 age: 40,
-                image: "https://i.imgur.com/uMsTGVE.jpeg",
+                image: "https://allthingsliberty.com/wp-content/uploads/2017/02/earlyadams2.jpg",
                 emoji: "⚖️",
                 job: "Lawyer & Founding Father",
                 location: "8 miles away in Braintree, Massachusetts",
                 bio: "Short king with a big brain and even bigger opinions. Defended British soldiers because JUSTICE matters.\n\nMarried to the smartest woman alive (Abigail).\n\nSwipe right if you can handle brutal honesty and existential rants. Red flags: I'm perpetually annoyed and will lose to Jefferson.",
+                green_flags: ["Principled AF", "Intelligent", "Devoted husband"],
+                red_flags: ["Constantly grumpy", "Insecure", "Holds grudges forever"],
                 interests: ["⚖️ Law", "📚 Books", "🗣️ Debate", "✍️ Writing to Abigail"]
             },
             {
@@ -479,6 +508,8 @@
                 job: "Washington's Aide & Founding Father",
                 location: "2 miles away in New York",
                 bio: "Started from the bottom (orphan in the Caribbean) now I'm here (Washington's right-hand man).\n\nI write like I'm running out of time because I AM.\n\nSwipe right if you want 51 essays about why the Constitution slaps. Red flags: Work-life balance? Never heard of her. Also I'll die in a duel.",
+                green_flags: ["Brilliant mind", "Self-made", "Incredibly ambitious"],
+                red_flags: ["Workaholic", "Arrogant", "Will literally die in a duel"],
                 interests: ["✍️ Writing", "💰 Economics", "⚔️ Military", "🏛️ Federalism"]
             },
             {
@@ -489,6 +520,8 @@
                 job: "Revolutionary Organizer",
                 location: "1 mile away in Boston, Massachusetts",
                 bio: "I throw the BEST tea parties (into the harbor). Looking for someone who shares my passion for liberty and mob violence against tax collectors.\n\nSwipe right if taxation without representation makes you RAGE.\n\nRed flags: Loyalists, calm people, anyone with chill.",
+                green_flags: ["Passionate about freedom", "Great organizer", "Charismatic speaker"],
+                red_flags: ["Literally incites riots", "Zero chill", "Terrible with money"],
                 interests: ["🍺 Brewing", "📣 Protesting", "🔥 Starting Riots", "📜 Sons of Liberty"]
             },
             {
@@ -499,6 +532,8 @@
                 job: "Writer & Revolutionary",
                 location: "5 miles away in Philadelphia, Pennsylvania",
                 bio: "My Common Sense pamphlet sold 500K copies—I'm basically a bestselling author. Too radical for everyone but that's their problem.\n\nSwipe right if you believe in revolution, reason, and roasting monarchies.\n\nRed flags: I'll get exiled from multiple countries.",
+                green_flags: ["Brilliant writer", "Genuine revolutionary", "Ahead of his time"],
+                red_flags: ["TOO radical", "Will get exiled", "Terrible people skills"],
                 interests: ["✍️ Writing", "🗽 Revolution", "💭 Philosophy", "🔥 Hot Takes"]
             },
             {
@@ -509,6 +544,8 @@
                 job: "Continental Army General",
                 location: "4 miles away in Rhode Island",
                 bio: "Quaker turned warrior (ironic, I know). Washington's most trusted general in the South.\n\nI win by... retreating strategically? It works though.\n\nSwipe right if you appreciate big brain military tactics. Red flags: I have asthma and will literally run away from you (strategically).",
+                green_flags: ["Strategic genius", "Calm under pressure", "Self-taught military expert"],
+                red_flags: ["Has asthma", "Will literally retreat", "Left the Quakers"],
                 interests: ["⚔️ Military Strategy", "📚 Reading", "🐴 Cavalry", "🗺️ Southern Campaign"]
             },
             {
@@ -519,6 +556,8 @@
                 job: "Artillery Commander",
                 location: "3 miles away in Boston, Massachusetts",
                 bio: "I dragged 60 tons of cannons through snow because COMMITMENT. Went from selling books to commanding artillery.\n\nSwipe right if you need someone who can handle heavy lifting (literally).\n\nRed flags: I'm 300 lbs and will eat all your food.",
+                green_flags: ["Incredibly determined", "Self-educated", "Loyal friend"],
+                red_flags: ["300 lbs", "Will eat all your food", "Bad with money"],
                 interests: ["📚 Books", "💥 Artillery", "❄️ Winter Expeditions", "🍖 Eating"]
             },
             {
@@ -529,6 +568,8 @@
                 job: "Continental General (for now)",
                 location: "6 miles away in Connecticut",
                 bio: "I was literally the best general we had until I... wasn't. Feeling unappreciated at work so I'm switching teams.\n\nSwipe left if you value loyalty. Swipe right if you're the British and have money.\n\nRed flags: My name will become synonymous with betrayal.",
+                green_flags: ["Brilliant tactician", "Brave in battle", "Ambitious"],
+                red_flags: ["LITERAL TRAITOR", "Greedy", "Major trust issues"],
                 interests: ["⚔️ Battle", "💰 Getting Paid", "🚩 Red Flags", "🇬🇧 New Opportunities"]
             },
             {
@@ -539,6 +580,8 @@
                 job: "French Volunteer General",
                 location: "3000 miles away in France",
                 bio: "Rich French boy who spent his trust fund on the American Revolution because LIBERTY! Washington is my dad now.\n\nSwipe right if you want someone enthusiastic, loyal, and possibly too idealistic.\n\nRed flags: I'm 19 and think I'm invincible.",
+                green_flags: ["Incredibly loyal", "Rich", "Genuine idealist"],
+                red_flags: ["Only 19", "Thinks he's invincible", "Trust fund kid"],
                 interests: ["🇫🇷 France", "🗽 Freedom", "⚔️ Fighting", "👨‍👦 Washington (dad)"]
             },
             {
@@ -549,6 +592,8 @@
                 job: "First Lady (eventually) & Farm Manager",
                 location: "8 miles away in Braintree, Massachusetts",
                 bio: "Remember the ladies—I told John and he... didn't listen. Running the farm while he's off making history.\n\nSwipe right if you can handle a woman smarter than you.\n\nRed flags: My husband is gone 24/7 and I'm basically a single mom.",
+                green_flags: ["Brilliant", "Independent", "Great writer"],
+                red_flags: ["Husband always gone", "Will call you out", "Ahead of her time"],
                 interests: ["✍️ Letter Writing", "📚 Reading", "🌾 Farm Management", "🗣️ Women's Rights"]
             },
             {
@@ -559,6 +604,8 @@
                 job: "Political Writer & Playwright",
                 location: "7 miles away in Plymouth, Massachusetts",
                 bio: "I write plays roasting British officials and they can't do anything about it because I'm THAT good.\n\nFirst female political writer in America.\n\nSwipe right if you appreciate sharp wit and sharper political commentary. Red flags: I will write about you.",
+                green_flags: ["Savage wit", "Fearless", "Talented writer"],
+                red_flags: ["WILL roast you publicly", "Holds grudges", "No filter"],
                 interests: ["✍️ Writing", "🎭 Political Satire", "📜 Propaganda", "👑 Roasting Tories"]
             },
             {
@@ -569,6 +616,8 @@
                 job: "King of Great Britain",
                 location: "3000 miles away in London, England",
                 bio: "They're throwing my tea in the harbor and calling ME crazy? I'm just trying to tax some colonists and they're OBSESSED with freedom.\n\nSwipe right if you're loyal to the crown.\n\nRed flags: I'm losing my colonies and my mind.",
+                green_flags: ["Literally a king", "Rich", "Well-educated"],
+                red_flags: ["Going insane", "Losing the war", "Terrible at listening"],
                 interests: ["👑 Monarchy", "🫖 Tea", "💂 British Empire", "😤 Taxation"]
             },
             {
@@ -579,6 +628,8 @@
                 job: "British General",
                 location: "Currently trapped in Yorktown, Virginia",
                 bio: "Went to Yorktown, got trapped, surrendered. That's... basically it.\n\nLooking for someone to help me rebuild my reputation.\n\nSwipe right if you're into redemption arcs. Red flags: I literally lost the war for Britain.",
+                green_flags: ["Experienced general", "Actually decent guy", "Learns from mistakes"],
+                red_flags: ["Lost the entire war", "Surrendered at Yorktown", "Career ruined"],
                 interests: ["⚔️ Military", "🇬🇧 Britain", "🏳️ Surrendering", "😔 Regret"]
             }
         ];
@@ -592,6 +643,15 @@
             const interestTags = profile.interests.map(interest => 
                 `<div class="interest-tag">${interest}</div>`
             ).join('');
+            const greenFlags = profile.green_flags ? 
+                `<div class="flags-section">
+                    ${profile.green_flags.map(flag => `<div class="flag-item"><span class="green-flag">✓</span> ${flag}</div>`).join('')}
+                </div>` : '';
+
+            const redFlags = profile.red_flags ? 
+                `<div class="flags-section">
+                    ${profile.red_flags.map(flag => `<div class="flag-item"><span class="red-flag">✗</span> ${flag}</div>`).join('')}
+                </div>` : '';
 
             // Check if profile has an image URL, if not use emoji
             const imageContent = profile.image && profile.image !== "https://example.com/image1.jpg" && profile.image !== "https://example.com/image2.jpg" && profile.image !== "https://example.com/image3.jpg" && profile.image !== "https://example.com/image4.jpg" && profile.image !== "https://example.com/image5.jpg" && profile.image !== "https://example.com/image6.jpg" && profile.image !== "https://example.com/image7.jpg" && profile.image !== "https://example.com/image8.jpg" && profile.image !== "https://example.com/image9.jpg"
@@ -615,6 +675,8 @@
                     </div>
                     <div class="card-bio">
                         <div class="bio-text">${profile.bio}</div>
+                        ${greenFlags}
+                        ${redFlags}
                         <div class="interests">${interestTags}</div>
                     </div>
                 </div>
