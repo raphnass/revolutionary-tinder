@@ -460,7 +460,7 @@
                 emoji: "⚔️",
                 job: "General & Founding Father",
                 location: "3 miles away in Mount Vernon, Virginia",
-                bio: "Looking for someone who can handle crossing frozen rivers and making history. Date nights include strategic military planning and nation-building.\n\nBTW - I literally cannot tell a lie.\n\nDon't swipe right if you're a British loyalist or believe that cherry tree story (fake news).",
+                bio: "Looking for someone who can handle crossing frozen rivers and making history. Date nights include strategic military planning and nation-building.\n\nBTW - I literally cannot tell a lie.\n\nDon't swipe right if you're a British loyalist or believe that cherry tree story (fake news).\n\nFun fact: My reputation for honesty wasn't just about being a good guy—it's literally what held the colonies together. When everything was falling apart, people trusted ME to lead because they knew I wouldn't screw them over for personal gain.",
                 green_flags: ["Natural leader", "Cannot tell a lie", "Great with horses"],
                 red_flags: ["Slave owner", "Emotionally distant", "Obsessed with honor"],
                 interests: ["⚔️ Military Strategy", "🌾 Farming", "🐴 Horseback Riding", "📜 Constitution"]
@@ -472,7 +472,7 @@
                 emoji: "📖",
                 job: "Founding Father & Polymath",
                 location: "5 miles away in Monticello, Virginia",
-                bio: "I can write you beautiful love letters (drafted the Declaration of Independence, NBD). Into philosophy, wine, and architecture.\n\nFull disclosure: I'm... complicated.\n\nSwipe right for intellectual conversation.\n\nDon't swipe right if you're a Federalist 🤢.",
+                bio: "I can write you beautiful love letters (drafted the Declaration of Independence, NBD). Into philosophy, wine, and architecture.\n\nFull disclosure: I'm... complicated.\n\nSwipe right for intellectual conversation.\n\nDon't swipe right if you're a Federalist 🤢.\n\nReal talk: I wrote 'all men are created equal' while owning slaves. Yeah, I know. That contradiction basically IS America—we're still dealing with the gap between our ideals and our reality.",
                 green_flags: ["Brilliant writer", "Renaissance man", "Great conversationalist"],
                 red_flags: ["Major hypocrite about slavery", "Sketchy personal life", "Spends beyond his means"],
                 interests: ["📖 Reading", "🍷 Wine", "🏛️ Architecture", "🎻 Violin"]
@@ -484,7 +484,7 @@
                 emoji: "💡",
                 job: "Founding Father & Diplomat",
                 location: "10 miles away in Philadelphia, Pennsylvania",
-                bio: "70 is the new 50. I invented bifocals so I can see you better 😉\n\nRetired from printing, now doing diplomacy in France where they LOVE me.\n\nSwipe right if you appreciate a man who can negotiate treaties AND fly kites in thunderstorms.",
+                bio: "70 is the new 50. I invented bifocals so I can see you better 😉\n\nRetired from printing, now doing diplomacy in France where they LOVE me.\n\nSwipe right if you appreciate a man who can negotiate treaties AND fly kites in thunderstorms.\n\nHere's the thing: France didn't join our revolution because they liked us—they joined because I convinced them we were cool AND worth betting on. Without French money and ships, we lose. Simple as that.",
                 green_flags: ["Genius inventor", "Witty conversationalist", "Popular in France"],
                 red_flags: ["Literal player", "Way too old", "Never stops talking about himself"],
                 interests: ["⚡ Electricity", "📰 Printing", "🇫🇷 French Culture", "💡 Inventing"]
@@ -496,7 +496,7 @@
                 emoji: "⚖️",
                 job: "Lawyer & Founding Father",
                 location: "8 miles away in Braintree, Massachusetts",
-                bio: "Short king with a big brain and even bigger opinions. Defended British soldiers because JUSTICE matters.\n\nMarried to the smartest woman alive (Abigail).\n\nSwipe right if you can handle brutal honesty and existential rants.",
+                bio: "Short king with a big brain and even bigger opinions. Defended British soldiers because JUSTICE matters.\n\nMarried to the smartest woman alive (Abigail).\n\nSwipe right if you can handle brutal honesty and existential rants.\n\nLook, I defended the British soldiers after the Boston Massacre even though everyone HATED me for it. Why? Because if we're gonna build a country on 'rule of law,' it has to apply even to people we despise. Otherwise it's just mob rule with better PR.",
                 green_flags: ["Principled lawyer", "Intelligent", "Devoted husband"],
                 red_flags: ["Constantly grumpy", "Insecure", "Holds grudges forever"],
                 interests: ["⚖️ Law", "📚 Books", "🗣️ Debate", "✍️ Writing to Abigail"]
@@ -568,7 +568,7 @@
                 emoji: "🚩",
                 job: "Continental General (for now)",
                 location: "6 miles away in Connecticut",
-                bio: "I was literally the best general we had until I... wasn't. Feeling unappreciated at work so I'm switching teams.\n\nSwipe left if you value loyalty. Swipe right if you're the British and have money.",
+                bio: "I was literally the best general we had until I... wasn't. Feeling unappreciated at work so I'm switching teams.\n\nSwipe left if you value loyalty. Swipe right if you're the British and have money.\n\nHonestly? I was one of the best generals in the Continental Army and they STILL didn't respect me. Sometimes feeling undervalued makes you do crazy things. My betrayal shows what happens when egos matter more than causes.",
                 green_flags: ["Brilliant tactician", "Brave in battle", "Ambitious"],
                 red_flags: ["LITERAL TRAITOR", "Greedy", "Major trust issues"],
                 interests: ["⚔️ Battle", "💰 Getting Paid", "🚩 Red Flags", "🇬🇧 New Opportunities"]
@@ -705,29 +705,67 @@
             
             let message = '';
             let emoji = '';
+            let analysis = '';
             
             if (loyalistCount > patriotCount) {
-                message = "Interesting... you're into loyalists! 🇬🇧 Maybe the revolution wasn't for you?";
+                message = "Interesting... you're into loyalists! 🇬🇧";
                 emoji = '👑';
+                analysis = `<div style="text-align: left; margin-top: 30px; padding: 20px; background: #f8f8f8; border-radius: 15px;">
+                    <h3 style="color: #fd297b; margin-bottom: 15px;">So... you matched with the British side?</h3>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242; margin-bottom: 12px;">
+                        Okay, hear me out—not everyone in the colonies wanted revolution. A lot of people (maybe like a third?) were actually loyalists who thought breaking away from Britain was a terrible idea. They weren't evil, they just valued stability and didn't want to gamble everything on some risky independence experiment.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242; margin-bottom: 12px;">
+                        King George and Cornwallis believed in order, tradition, and not throwing away centuries of British law for some Enlightenment fever dream. Were they wrong? Well, they lost, so history says yes. But plenty of smart people at the time agreed with them.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242;">
+                        Your matches suggest you're skeptical of radical change and prefer working within existing systems. That's actually a pretty reasonable take—revolutions are messy and don't always end well. Just... maybe don't say this too loudly on July 4th.
+                    </p>
+                </div>`;
             } else if (patriotCount > 0) {
-                message = "You support the revolution! 🇺🇸 Freedom lover detected!";
+                message = "You support the revolution! 🇺🇸";
                 emoji = '🦅';
+                analysis = `<div style="text-align: left; margin-top: 30px; padding: 20px; background: #f8f8f8; border-radius: 15px;">
+                    <h3 style="color: #fd297b; margin-bottom: 15px;">You're Team Patriot!</h3>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242; margin-bottom: 12px;">
+                        So you matched with the revolutionaries—people who believed individual freedom mattered more than tradition or stability. Makes sense. These were the folks who risked literally everything (their lives, their property, their families) because they thought British rule sucked that bad.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242; margin-bottom: 12px;">
+                        But here's the messy part: Washington and Jefferson both owned slaves while fighting for "liberty." Franklin was a genius but also kind of a player. Adams was brilliant but insufferable. None of these people were perfect—they were just willing to fight for an idea even though they personally fell short of it.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242;">
+                        Your patriot matches show you value bold action over playing it safe. You're okay with imperfect people leading imperfect movements as long as the cause is right. That's very "the end justifies the means" of you.
+                    </p>
+                </div>`;
             } else {
-                message = "You passed on everyone? Commitment issues much? 😅";
+                message = "You passed on everyone? 🤔";
                 emoji = '🚫';
+                analysis = `<div style="text-align: left; margin-top: 30px; padding: 20px; background: #f8f8f8; border-radius: 15px;">
+                    <h3 style="color: #fd297b; margin-bottom: 15px;">The Switzerland Approach</h3>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242; margin-bottom: 12px;">
+                        So you swiped left on EVERYONE? Honestly, that's a whole mood. A lot of colonists tried to stay neutral during the Revolution—they just wanted to keep their heads down and survive regardless of who won.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242; margin-bottom: 12px;">
+                        Problem was, both sides HATED neutrals. Patriots thought they were cowardly Tory-sympathizers. Loyalists thought they were secret rebels. You literally couldn't win by staying out of it.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.8; color: #424242;">
+                        Your complete lack of matches suggests you're suspicious of anyone with strong political opinions (fair). But history shows that when things get real, neutrality stops being an option. Eventually you have to pick a side—or a side picks you.
+                    </p>
+                </div>`;
             }
 
             const matchedNames = likedProfiles.map(p => p.name).join(', ');
             
             cardContainer.innerHTML = `
-                <div style="text-align: center; padding: 60px 30px; color: #424242;">
+                <div style="text-align: center; padding: 40px 30px; color: #424242; overflow-y: auto; max-height: 100%;">
                     <div style="font-size: 100px; margin-bottom: 20px;">${emoji}</div>
-                    <h2 style="font-size: 36px; margin-bottom: 20px; color: #fd297b;">It's a Match!</h2>
+                    <h2 style="font-size: 36px; margin-bottom: 20px; color: #fd297b;">Results Are In!</h2>
                     <p style="font-size: 20px; margin-bottom: 30px; line-height: 1.6;">${message}</p>
                     ${likedProfiles.length > 0 ? `<div style="margin-top: 30px;">
                         <p style="font-size: 18px; font-weight: 600; margin-bottom: 15px;">You matched with:</p>
                         <p style="font-size: 16px; color: #666; line-height: 1.8;">${matchedNames}</p>
                     </div>` : ''}
+                    ${analysis}
                 </div>
             `;
             
